@@ -1,5 +1,5 @@
 import { MidwayConfig } from '@midwayjs/core';
-import { UserEntity } from '../entity/user.entity'
+import { UserEntity } from '../entity/user.entity';
 import { join } from 'path';
 
 export default {
@@ -10,11 +10,9 @@ export default {
         database: join(__dirname, '../../test.sqlite'),
         synchronize: true,
         logging: true,
-        
-        // 配置实体模型
-        entities: [UserEntity],
-      }
-    }
+        entities: [UserEntity], // 配置实体模型
+      },
+    },
   },
   jwt: {
     secret: 'midways', // fs.readFileSync('xxxxx.key')
